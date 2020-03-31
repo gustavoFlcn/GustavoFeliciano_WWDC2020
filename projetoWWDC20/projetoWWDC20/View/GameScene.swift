@@ -24,6 +24,10 @@ class GameScene: SKScene {
         self.character?.position = CGPoint(x: -350, y: 200)
         self.character?.size = CGSize(width: self.size.height*0.1, height: self.size.height*0.1)
         self.addChild(character!)
+        
+        let touristSpot = TouristSpot(imageNamed: "notVisited")
+        touristSpot.setUpSpot()
+        self.addChild(touristSpot)
     }
     
     override func update(_ currentTime: TimeInterval) {
