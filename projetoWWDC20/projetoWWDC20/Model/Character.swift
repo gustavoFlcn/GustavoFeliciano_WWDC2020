@@ -16,7 +16,6 @@ class Character: SKSpriteNode{
 
 //MARK: Movments of character.
 extension Character{
-    
     // Move the character for RIGHT
     func moveToRight(){
         switch self.position {
@@ -87,5 +86,4 @@ extension Character{
             self.run(movment)
         }
     }
-    
 }
