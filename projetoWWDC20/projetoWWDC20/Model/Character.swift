@@ -16,63 +16,76 @@ class Character: SKSpriteNode{
 
 //MARK: Movments of character.
 extension Character{
-    // Move this nolde for a position in right of the screen
+    
+    // Move the character for RIGHT
     func moveToRight(){
         switch self.position {
-        case CGPoint(x: -350.0, y: 200.0):
-            self.mover = SKAction.moveTo(x: -110.0, duration: 0.5)
+        case CGPoint(x: -200.0, y: -135.0):
+             self.mover = SKAction.move(to: CGPoint(x: -20.0, y: -77.0), duration: 0.5)
             break
-        case CGPoint(x: -110.0, y: 200.0):
-            self.mover = SKAction.moveTo(y: -190.0, duration: 0.5)
+        case CGPoint(x: -100.0, y: 123.0):
+            self.mover = SKAction.move(to: CGPoint(x: 135.0, y: 135.0), duration: 0.5)
             break
-        case CGPoint(x: -110.0, y: -190.0):
-            self.mover = SKAction.moveTo(x: 90.0, duration: 0.5)
-            break
-        case CGPoint(x: 90.0, y: -190.0):
-            self.mover = SKAction.moveTo(y: 200.0, duration: 0.5)
-            break
-        case CGPoint(x: 90.0, y: 200.0):
-            self.mover = SKAction.moveTo(x: 290.0, duration: 0.5)
-            break
-        case CGPoint(x: 290.0, y: 200.0):
-            self.mover = SKAction.moveTo(y: -190.0, duration: 0.5)
+        case CGPoint(x: 135.0, y: 135.0):
+            self.mover = SKAction.move(to: CGPoint(x: -20.0, y: -77.0), duration: 0.5)
             break
         default:
             break
         }
-        
         if let movment = mover{
             self.run(movment)
         }
     }
     
-    // Move this nolde for a position in left of the screen
+    // Move the character for LEFT
     func moveToLeft(){
         switch self.position {
-        case CGPoint(x: -350.0, y: 200.0):
-            self.mover = SKAction.moveTo(x: -350.0, duration: 0.5)
+        case CGPoint(x: -20.0, y: -77.0):
+            self.mover = SKAction.move(to: CGPoint(x: -200.0, y: -135.0), duration: 0.5)
             break
-        case CGPoint(x: -110.0, y: 200.0):
-            self.mover = SKAction.moveTo(x: -350.0, duration: 0.5)
-            break
-        case CGPoint(x: -110.0, y: -190.0):
-            self.mover = SKAction.moveTo(y: 200.0, duration: 0.5)
-            break
-        case CGPoint(x: 90.0, y: -190.0):
-            self.mover = SKAction.moveTo(x: -110.0, duration: 0.5)
-            break
-        case CGPoint(x: 90.0, y: 200.0):
-            self.mover = SKAction.moveTo(y: -190.0, duration: 0.5)
-            break
-        case CGPoint(x: 290.0, y: 200.0):
-            self.mover = SKAction.moveTo(x: 90.0, duration: 0.5)
+        case CGPoint(x: 135.0, y: 135.0):
+            self.mover = SKAction.move(to: CGPoint(x: -100.0, y: 123.0), duration: 0.5)
             break
         default:
             break
         }
-        
         if let movment = mover{
             self.run(movment)
         }
     }
+    
+    // Move the character for UP
+    func moveToUp(){
+        switch self.position {
+        case CGPoint(x: -200.0, y: -135.0):
+            self.mover = SKAction.move(to: CGPoint(x: -303, y: 80), duration: 0.5)
+            break
+        case CGPoint(x: -20.0, y: -77.0):
+            self.mover = SKAction.move(to: CGPoint(x: -100.0, y: 123.0), duration: 0.5)
+            break
+        default:
+            break
+        }
+        if let movment = mover{
+            self.run(movment)
+        }
+    }
+    
+    // Move the character for DOWN
+    func moveToDown(){
+        switch self.position {
+        case CGPoint(x: -303, y: 80):
+            self.mover = SKAction.move(to: CGPoint(x: -200.0, y: -135.0), duration: 0.5)
+            break
+        case CGPoint(x: -100.0, y: 123.0):
+            self.mover = SKAction.move(to: CGPoint(x: -20.0, y: -77.0), duration: 0.5)
+            break
+        default:
+            break
+        }
+        if let movment = mover{
+            self.run(movment)
+        }
+    }
+    
 }

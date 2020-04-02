@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "map.png",
+      "filename" : "visited.png",
       "idiom" : "universal",
       "scale" : "1x"
     },

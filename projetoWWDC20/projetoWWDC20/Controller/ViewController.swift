@@ -30,6 +30,8 @@ class ViewController: NSViewController {
                 view.presentScene(gameScene)
             }
             
+            print(self.scene?.size)
+            
             
             view.ignoresSiblingOrder = true
             

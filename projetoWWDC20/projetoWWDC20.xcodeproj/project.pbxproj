@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EB1F004124327216000A3751 /* PitStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1F004024327216000A3751 /* PitStop.swift */; };
-		EB1F0043243285D2000A3751 /* PitStopStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1F0042243285D2000A3751 /* PitStopStateMachine.swift */; };
+		EB146AB82433863900180D58 /* Visited.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB146AB72433863900180D58 /* Visited.swift */; };
+		EB146ABA2433864B00180D58 /* NotVisited.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB146AB92433864B00180D58 /* NotVisited.swift */; };
+		EB146ABC2433881200180D58 /* PointState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB146ABB2433881200180D58 /* PointState.swift */; };
+		EB1F004124327216000A3751 /* TouristSpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1F004024327216000A3751 /* TouristSpot.swift */; };
 		EBD6BE61242E7E1E0020A612 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD6BE60242E7E1E0020A612 /* AppDelegate.swift */; };
 		EBD6BE67242E7E1E0020A612 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD6BE66242E7E1E0020A612 /* GameScene.swift */; };
 		EBD6BE69242E7E1E0020A612 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD6BE68242E7E1E0020A612 /* ViewController.swift */; };
@@ -18,8 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EB1F004024327216000A3751 /* PitStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitStop.swift; sourceTree = "<group>"; };
-		EB1F0042243285D2000A3751 /* PitStopStateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitStopStateMachine.swift; sourceTree = "<group>"; };
+		EB146AB72433863900180D58 /* Visited.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visited.swift; sourceTree = "<group>"; };
+		EB146AB92433864B00180D58 /* NotVisited.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotVisited.swift; sourceTree = "<group>"; };
+		EB146ABB2433881200180D58 /* PointState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointState.swift; sourceTree = "<group>"; };
+		EB1F004024327216000A3751 /* TouristSpot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouristSpot.swift; sourceTree = "<group>"; };
 		EBD6BE5D242E7E1E0020A612 /* projetoWWDC20.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projetoWWDC20.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBD6BE60242E7E1E0020A612 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBD6BE66242E7E1E0020A612 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -42,10 +46,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB146AB6243385A200180D58 /* States */ = {
+			isa = PBXGroup;
+			children = (
+				EB146AB72433863900180D58 /* Visited.swift */,
+				EB146AB92433864B00180D58 /* NotVisited.swift */,
+			);
+			path = States;
+			sourceTree = "<group>";
+		};
 		EB1F004424329229000A3751 /* StateMachine */ = {
 			isa = PBXGroup;
 			children = (
-				EB1F0042243285D2000A3751 /* PitStopStateMachine.swift */,
+				EB146ABB2433881200180D58 /* PointState.swift */,
+				EB146AB6243385A200180D58 /* States */,
 			);
 			path = StateMachine;
 			sourceTree = "<group>";
@@ -55,7 +69,7 @@
 			children = (
 				EB1F004424329229000A3751 /* StateMachine */,
 				EBD6BE7B242E82AB0020A612 /* Character.swift */,
-				EB1F004024327216000A3751 /* PitStop.swift */,
+				EB1F004024327216000A3751 /* TouristSpot.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -178,11 +192,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBD6BE69242E7E1E0020A612 /* ViewController.swift in Sources */,
-				EB1F004124327216000A3751 /* PitStop.swift in Sources */,
+				EB1F004124327216000A3751 /* TouristSpot.swift in Sources */,
 				EBD6BE67242E7E1E0020A612 /* GameScene.swift in Sources */,
 				EBD6BE61242E7E1E0020A612 /* AppDelegate.swift in Sources */,
+				EB146ABA2433864B00180D58 /* NotVisited.swift in Sources */,
 				EBD6BE7C242E82AB0020A612 /* Character.swift in Sources */,
-				EB1F0043243285D2000A3751 /* PitStopStateMachine.swift in Sources */,
+				EB146AB82433863900180D58 /* Visited.swift in Sources */,
+				EB146ABC2433881200180D58 /* PointState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
