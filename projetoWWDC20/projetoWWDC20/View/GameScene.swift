@@ -11,27 +11,36 @@ import GameplayKit
 
 class GameScene: SKScene {
     private var backGround: SKSpriteNode?
-    private var character : Character?
-    private var touristSpots: [TouristSpot]?
+    var character : Character?
+    var touristSpots: [TouristSpot]?
+    var stateMachine: GKStateMachine?
     
     override func didMove(to view: SKView) {
         self.backGround = SKSpriteNode(imageNamed: "Mapa")
+        self.backGround?.name = "map"
         self.backGround?.zPosition = 0
         backGround?.size = CGSize(width: self.size.width, height: self.size.height)
         self.addChild(backGround!)
         
         self.character = Character(imageNamed: "character")
+        self.character?.name = "character"
         self.character?.zPosition = 3
         self.character?.position = CGPoint(x: -303, y: 80)
         self.character?.size = CGSize(width: self.size.height*0.1, height: self.size.height*0.1)
         self.addChild(character!)
         
+        setUpStateMachine()
         self.touristSpots = [TouristSpot]()
         setUpTouristSpots()
     }
     
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
+    }
+    
+    private func setUpStateMachine(){
+        stateMachine = GKStateMachine(states: [SceneNormal(scene: self), SceneTourist(scene: self), ScenePassport(scene: self)])
+        stateMachine!.enter(SceneNormal.self)
     }
 }
 
@@ -46,6 +55,7 @@ extension GameScene{
         var newTouristSpot: TouristSpot?
         for i in 0...3{
             newTouristSpot = TouristSpot(imageNamed: "notVisited")
+            newTouristSpot?.name = "spot\(i+1)"
             newTouristSpot!.setUpSpot()
             newTouristSpot?.position = arrayPositions[i]
             self.touristSpots?.append(newTouristSpot!)
@@ -55,7 +65,6 @@ extension GameScene{
     }
 }
 
-//MARK: Keyboard inputs
 extension GameScene{
     // Detect the event in kayboard
     override func keyDown(with event: NSEvent) {
@@ -68,6 +77,13 @@ extension GameScene{
            self.character?.moveToDown()
         case 126:
             self.character?.moveToUp()
+        case 53:
+            guard let stateMachine = self.stateMachine else {return}
+            if stateMachine.canEnterState(SceneNormal.self){
+                self.stateMachine?.enter(SceneNormal.self)
+            }else{
+                self.stateMachine?.enter(ScenePassport.self)
+            }
         default:
             print("keyDown: \(event.characters!) keyCode: \(event.keyCode)")
         }

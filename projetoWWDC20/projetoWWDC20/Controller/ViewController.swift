@@ -41,3 +41,8 @@ class ViewController: NSViewController {
     }
 }
 
+//MARK: Keyboard inputs
+extension ViewController{
+    
+}
+

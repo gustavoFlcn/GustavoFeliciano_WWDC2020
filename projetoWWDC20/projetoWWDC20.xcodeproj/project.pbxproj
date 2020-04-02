@@ -10,6 +10,10 @@
 		EB146AB82433863900180D58 /* Visited.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB146AB72433863900180D58 /* Visited.swift */; };
 		EB146ABA2433864B00180D58 /* NotVisited.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB146AB92433864B00180D58 /* NotVisited.swift */; };
 		EB146ABC2433881200180D58 /* PointState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB146ABB2433881200180D58 /* PointState.swift */; };
+		EB173B1A24365E3400867DB4 /* SceneTouristSpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB173B1924365E3400867DB4 /* SceneTouristSpot.swift */; };
+		EB173B1C24365E4300867DB4 /* ScenePassport.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB173B1B24365E4300867DB4 /* ScenePassport.swift */; };
+		EB173B1E24365FD200867DB4 /* SceneState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB173B1D24365FD200867DB4 /* SceneState.swift */; };
+		EB173B202436615A00867DB4 /* SceneNormal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB173B1F2436615A00867DB4 /* SceneNormal.swift */; };
 		EB1F004124327216000A3751 /* TouristSpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1F004024327216000A3751 /* TouristSpot.swift */; };
 		EBD6BE61242E7E1E0020A612 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD6BE60242E7E1E0020A612 /* AppDelegate.swift */; };
 		EBD6BE67242E7E1E0020A612 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD6BE66242E7E1E0020A612 /* GameScene.swift */; };
@@ -23,6 +27,10 @@
 		EB146AB72433863900180D58 /* Visited.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visited.swift; sourceTree = "<group>"; };
 		EB146AB92433864B00180D58 /* NotVisited.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotVisited.swift; sourceTree = "<group>"; };
 		EB146ABB2433881200180D58 /* PointState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointState.swift; sourceTree = "<group>"; };
+		EB173B1924365E3400867DB4 /* SceneTouristSpot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneTouristSpot.swift; sourceTree = "<group>"; };
+		EB173B1B24365E4300867DB4 /* ScenePassport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenePassport.swift; sourceTree = "<group>"; };
+		EB173B1D24365FD200867DB4 /* SceneState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneState.swift; sourceTree = "<group>"; };
+		EB173B1F2436615A00867DB4 /* SceneNormal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneNormal.swift; sourceTree = "<group>"; };
 		EB1F004024327216000A3751 /* TouristSpot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouristSpot.swift; sourceTree = "<group>"; };
 		EBD6BE5D242E7E1E0020A612 /* projetoWWDC20.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projetoWWDC20.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBD6BE60242E7E1E0020A612 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,20 +54,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EB146AB6243385A200180D58 /* States */ = {
+		EB146AB6243385A200180D58 /* SpotStates */ = {
 			isa = PBXGroup;
 			children = (
 				EB146AB72433863900180D58 /* Visited.swift */,
 				EB146AB92433864B00180D58 /* NotVisited.swift */,
 			);
-			path = States;
+			path = SpotStates;
+			sourceTree = "<group>";
+		};
+		EB173B1824365E0900867DB4 /* SceneStates */ = {
+			isa = PBXGroup;
+			children = (
+				EB173B1924365E3400867DB4 /* SceneTouristSpot.swift */,
+				EB173B1B24365E4300867DB4 /* ScenePassport.swift */,
+				EB173B1F2436615A00867DB4 /* SceneNormal.swift */,
+			);
+			path = SceneStates;
 			sourceTree = "<group>";
 		};
 		EB1F004424329229000A3751 /* StateMachine */ = {
 			isa = PBXGroup;
 			children = (
+				EB173B1D24365FD200867DB4 /* SceneState.swift */,
+				EB173B1824365E0900867DB4 /* SceneStates */,
 				EB146ABB2433881200180D58 /* PointState.swift */,
-				EB146AB6243385A200180D58 /* States */,
+				EB146AB6243385A200180D58 /* SpotStates */,
 			);
 			path = StateMachine;
 			sourceTree = "<group>";
@@ -191,11 +211,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB173B1E24365FD200867DB4 /* SceneState.swift in Sources */,
 				EBD6BE69242E7E1E0020A612 /* ViewController.swift in Sources */,
 				EB1F004124327216000A3751 /* TouristSpot.swift in Sources */,
+				EB173B202436615A00867DB4 /* SceneNormal.swift in Sources */,
+				EB173B1A24365E3400867DB4 /* SceneTouristSpot.swift in Sources */,
 				EBD6BE67242E7E1E0020A612 /* GameScene.swift in Sources */,
 				EBD6BE61242E7E1E0020A612 /* AppDelegate.swift in Sources */,
 				EB146ABA2433864B00180D58 /* NotVisited.swift in Sources */,
+				EB173B1C24365E4300867DB4 /* ScenePassport.swift in Sources */,
 				EBD6BE7C242E82AB0020A612 /* Character.swift in Sources */,
 				EB146AB82433863900180D58 /* Visited.swift in Sources */,
 				EB146ABC2433881200180D58 /* PointState.swift in Sources */,
