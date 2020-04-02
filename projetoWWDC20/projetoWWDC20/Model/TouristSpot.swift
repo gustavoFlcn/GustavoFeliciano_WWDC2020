@@ -15,13 +15,14 @@ class TouristSpot: SKSpriteNode{
     
     func setUpSpot(){
         self.position = CGPoint(x: 0, y: 0)
-        self.size = CGSize(width: 50, height: 50)
+        self.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+        self.size = CGSize(width: 75, height: 75)
         self.zPosition = 1
         self.setUpStateMachine()
     }
     
     private func setUpStateMachine(){
         stateMachine = GKStateMachine(states: [Visited(touristPoint: self), NotVisited(touristPoint: self)])
-        stateMachine!.enter(Visited.self)
+        stateMachine!.enter(NotVisited.self)
     }
 }
