@@ -10,10 +10,12 @@ import SpriteKit
 import GameplayKit
 
 class GameScene: SKScene {
-    private var backGround: SKSpriteNode?
+    var backGround: SKSpriteNode?
     var character : Character?
     var touristSpots: [TouristSpot]?
     var stateMachine: GKStateMachine?
+    var popUp: TouristPopUp?
+    
     
     override func didMove(to view: SKView) {
         self.backGround = SKSpriteNode(imageNamed: "Mapa")
@@ -23,11 +25,17 @@ class GameScene: SKScene {
         self.addChild(backGround!)
         
         self.character = Character(imageNamed: "character")
+        self.character?.sceneGame = self
         self.character?.name = "character"
         self.character?.zPosition = 3
         self.character?.position = CGPoint(x: -303, y: 80)
         self.character?.size = CGSize(width: self.size.height*0.1, height: self.size.height*0.1)
         self.addChild(character!)
+        
+        self.popUp = TouristPopUp()
+        self.popUp?.position = CGPoint(x: 0, y: 0)
+        self.popUp?.zPosition = 4
+        self.addChild(popUp!)
         
         setUpStateMachine()
         self.touristSpots = [TouristSpot]()
@@ -78,11 +86,9 @@ extension GameScene{
         case 126:
             self.character?.moveToUp()
         case 53:
-            guard let stateMachine = self.stateMachine else {return}
-            if stateMachine.canEnterState(SceneNormal.self){
+            guard let currentState = self.stateMachine?.currentState else {return}
+            if currentState is SceneTourist || currentState is ScenePassport{
                 self.stateMachine?.enter(SceneNormal.self)
-            }else{
-                self.stateMachine?.enter(ScenePassport.self)
             }
         default:
             print("keyDown: \(event.characters!) keyCode: \(event.keyCode)")

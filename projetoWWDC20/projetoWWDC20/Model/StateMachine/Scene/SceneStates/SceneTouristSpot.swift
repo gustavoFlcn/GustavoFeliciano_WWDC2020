@@ -16,9 +16,13 @@ class  SceneTourist: SceneState{
     
     override func didEnter(from previousState: GKState?) {
         self.sceneGame.character?.isPaused = true
+        self.sceneGame.popUp?.isHidden = false
     }
     
     override func willExit(to nextState: GKState) {
         self.sceneGame.character?.removeAllActions()
+        self.sceneGame.popUp?.isHidden = true
     }
+    
+    
 }

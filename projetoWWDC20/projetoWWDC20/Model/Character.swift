@@ -12,6 +12,7 @@ import SpriteKit
 
 class Character: SKSpriteNode{    
     private var mover: SKAction?
+    var sceneGame: GameScene?
 }
 
 //MARK: Movments of character.
@@ -32,7 +33,9 @@ extension Character{
             break
         }
         if let movment = mover{
-            self.run(movment)
+            self.run(movment){
+                self.sceneGame?.stateMachine?.enter(SceneTourist.self)
+            }
         }
     }
     
@@ -49,7 +52,9 @@ extension Character{
             break
         }
         if let movment = mover{
-            self.run(movment)
+            self.run(movment){
+                self.sceneGame?.stateMachine?.enter(SceneTourist.self)
+            }
         }
     }
     
@@ -66,7 +71,11 @@ extension Character{
             break
         }
         if let movment = mover{
-            self.run(movment)
+            self.run(movment){
+               if self.position != CGPoint(x: -303, y: 80){
+                    self.sceneGame?.stateMachine?.enter(SceneTourist.self)
+                }
+            }
         }
     }
     
@@ -83,7 +92,11 @@ extension Character{
             break
         }
         if let movment = mover{
-            self.run(movment)
+            self.run(movment){
+                if self.position != CGPoint(x: -303, y: 80){
+                    self.sceneGame?.stateMachine?.enter(SceneTourist.self)
+                }
+            }
         }
     }
 }
