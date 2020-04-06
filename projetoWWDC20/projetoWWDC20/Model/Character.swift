@@ -19,6 +19,10 @@ class Character: SKSpriteNode{
 extension Character{
     // Move the character for RIGHT
     func moveToRight(){
+        mover = nil
+        if self.hasActions(){
+            return
+        }
         switch self.position {
         case CGPoint(x: -195.0, y: -115.0):
              self.mover = SKAction.move(to: CGPoint(x: -15.0, y: -60.0), duration: 0.5)
@@ -41,6 +45,10 @@ extension Character{
     
     // Move the character for LEFT
     func moveToLeft(){
+        mover = nil
+        if self.hasActions(){
+            return
+        }
         switch self.position {
         case CGPoint(x: -15.0, y: -60.0):
             self.mover = SKAction.move(to: CGPoint(x: -195.0, y: -115.0), duration: 0.5)
@@ -60,6 +68,10 @@ extension Character{
     
     // Move the character for UP
     func moveToUp(){
+        mover = nil
+        if self.hasActions(){
+            return
+        }
         switch self.position {
         case CGPoint(x: -195.0, y: -115.0):
             self.mover = SKAction.move(to: CGPoint(x: -300, y: 100), duration: 0.5)
@@ -81,6 +93,10 @@ extension Character{
     
     // Move the character for DOWN
     func moveToDown(){
+        mover = nil
+        if self.hasActions(){
+            return
+        }
         switch self.position {
         case CGPoint(x: -300, y: 100):
             self.mover = SKAction.move(to: CGPoint(x: -195.0, y: -115.0), duration: 0.5)
