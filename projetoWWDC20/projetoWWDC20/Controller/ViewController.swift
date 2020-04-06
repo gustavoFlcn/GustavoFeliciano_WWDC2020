@@ -30,13 +30,11 @@ class ViewController: NSViewController {
                 view.presentScene(gameScene)
             }
             
-            print(self.scene?.size)
             
-            
-            view.ignoresSiblingOrder = true
-            
-            view.showsFPS = true
-            view.showsNodeCount = true
+//            view.ignoresSiblingOrder = true
+//
+//            view.showsFPS = true
+//            view.showsNodeCount = true
         }
     }
 }

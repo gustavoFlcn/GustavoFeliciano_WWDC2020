@@ -29,7 +29,7 @@ class GameScene: SKScene {
         self.character?.name = "character"
         self.character?.zPosition = 3
         self.character?.position = CGPoint(x: -303, y: 80)
-        self.character?.size = CGSize(width: self.size.height*0.1, height: self.size.height*0.1)
+        self.character?.size = CGSize(width: self.size.height*0.09, height: self.size.height*0.16)
         self.addChild(character!)
         
         self.popUp = TouristPopUp()

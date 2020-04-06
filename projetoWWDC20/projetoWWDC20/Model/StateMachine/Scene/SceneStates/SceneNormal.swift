@@ -16,6 +16,6 @@ class  SceneNormal: SceneState{
     
     override func didEnter(from previousState: GKState?) {
         self.sceneGame.character?.isPaused = false
-        self.sceneGame.popUp?.isHidden = true
+        self.sceneGame.popUp?.isPaused = true
     }
 }
