@@ -28,7 +28,7 @@ class GameScene: SKScene {
         self.character?.sceneGame = self
         self.character?.name = "character"
         self.character?.zPosition = 3
-        self.character?.position = CGPoint(x: -303, y: 80)
+        self.character?.position = CGPoint(x: -300, y: 100)
         self.character?.size = CGSize(width: self.size.height*0.09, height: self.size.height*0.16)
         self.addChild(character!)
         

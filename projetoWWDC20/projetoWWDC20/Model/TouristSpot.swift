@@ -11,7 +11,7 @@ import GameplayKit
 
 class TouristSpot: SKSpriteNode{
     
-    private var stateMachine: GKStateMachine?
+    public var stateMachine: GKStateMachine?
     
     func setUpSpot(){
         self.position = CGPoint(x: 0, y: 0)

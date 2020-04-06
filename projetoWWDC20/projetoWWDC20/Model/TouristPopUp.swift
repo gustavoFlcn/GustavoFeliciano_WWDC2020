@@ -9,15 +9,19 @@
 import GameplayKit
 import SpriteKit
 
+
 class TouristPopUp: SKNode{
     var sceneGame: GameScene?
     var blurPopUp: SKSpriteNode?
     var stickerTouristSpot: SKSpriteNode?
     var keyEsc: SKSpriteNode?
+    var touristGuide: SKSpriteNode?
+    var localDescription: SKLabelNode?
+    var dialogBallon: SKSpriteNode?
     
     override init() {
         blurPopUp = SKSpriteNode()
-        blurPopUp?.color = .black
+        blurPopUp?.color = .white
         blurPopUp?.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         blurPopUp?.zPosition = 0
         blurPopUp?.size = CGSize(width: 800, height: 600)
@@ -35,11 +39,33 @@ class TouristPopUp: SKNode{
         keyEsc?.zPosition = 3
         keyEsc?.position = CGPoint(x: 100, y: 130)
         
+        touristGuide = SKSpriteNode(imageNamed: "touristGuide")
+        touristGuide?.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+        touristGuide?.size = CGSize(width: 180, height: 350)
+        touristGuide?.zRotation = 0.15
+        touristGuide?.zPosition = 3
+        touristGuide?.position = CGPoint(x: 300, y: -180)
+        
+        dialogBallon = SKSpriteNode(imageNamed: "dialogBallon")
+        dialogBallon?.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+        dialogBallon?.size = CGSize(width: 550, height: 100)
+        dialogBallon?.zPosition = 3
+        dialogBallon?.position = CGPoint(x: -50, y: -150)
+        
+        localDescription = SKLabelNode(text: "Esse aqui é um teste de Label")
+        localDescription?.fontSize = 30
+        localDescription?.fontColor = #colorLiteral(red: 0.7490196078, green: 0.4823529412, blue: 0.1215686275, alpha: 1)
+        localDescription?.fontName = "Chalkboard SE"
+        localDescription?.position = CGPoint(x: -10, y: -5)
+
         super.init()
         self.alpha = 0
+        self.addChild(blurPopUp!)
         self.addChild(stickerTouristSpot!)
         self.addChild(keyEsc!)
-        self.addChild(blurPopUp!)
+        self.addChild(touristGuide!)
+        self.addChild(dialogBallon!)
+        self.dialogBallon?.addChild(localDescription!)
     }
     
     required init?(coder aDecoder: NSCoder) {
