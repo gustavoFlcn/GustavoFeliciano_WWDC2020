@@ -16,11 +16,39 @@ class  ScenePassport: SceneState{
     
     override func didEnter(from previousState: GKState?) {
         self.sceneGame.character?.isPaused = true
+        self.sceneGame.touristPopUp?.isPaused = true
+        self.sceneGame.passportPopUp?.isHidden = false
+        showStickerInPassport()
     }
     
     override func willExit(to nextState: GKState) {
         self.sceneGame.character?.removeAllActions()
     }
     
+    func showStickerInPassport(){
+        let passport = self.sceneGame.passportPopUp?.passport
+        let wait = SKAction.wait(forDuration: 2)
+        let fadeAnimation = SKAction.fadeAlpha(to: 1.0, duration: 1.5)
+        let sequence = SKAction.sequence([wait, fadeAnimation])
+        switch self.sceneGame.character?.position {
+        case CGPoint(x: -195.0, y: -115.0):
+            passport?.stickerIgrejinha.run(sequence)
+            break
+        case CGPoint(x: -15.0, y: -60.0):
+            passport?.stickerSantuario.run(sequence)
+            break
+        case CGPoint(x: -98.0, y: 140.0):
+            passport?.stickerRuaAlegria.run(sequence)
+            break
+        case CGPoint(x: 138.0, y: 155.0):
+            passport?.stickerFeira.run(sequence)
+            break
+        case CGPoint(x: 270, y: 60.0):
+            passport?.stickerMinhaCasa.run(sequence)
+            break
+        default:
+            break
+        }
+    }
     
 }
