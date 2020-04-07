@@ -77,15 +77,15 @@ class  SceneTourist: SceneState{
             break
         case 3:
             self.sceneGame.touristPopUp?.localDescription?.text = localDescription.ruaDaAlegria
-            self.sceneGame.touristPopUp?.stickerTouristSpot?.texture = SKTexture(imageNamed: "stickerTeste")
+            self.sceneGame.touristPopUp?.stickerTouristSpot?.texture = SKTexture(imageNamed: "ruaAlegria")
             break
         case 4:
             self.sceneGame.touristPopUp?.localDescription?.text = localDescription.feira
-            self.sceneGame.touristPopUp?.stickerTouristSpot?.texture = SKTexture(imageNamed: "stickerTeste")
+            self.sceneGame.touristPopUp?.stickerTouristSpot?.texture = SKTexture(imageNamed: "feira")
             break
         case 5:
             self.sceneGame.touristPopUp?.localDescription?.text = localDescription.minhaCasa
-            self.sceneGame.touristPopUp?.stickerTouristSpot?.texture = SKTexture(imageNamed: "stickerTeste")
+            self.sceneGame.touristPopUp?.stickerTouristSpot?.texture = SKTexture(imageNamed: "minhaCasa")
             break
         default:
             break

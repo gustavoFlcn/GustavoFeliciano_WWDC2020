@@ -10,6 +10,7 @@ import SpriteKit
 import GameplayKit
 
 class GameScene: SKScene {
+    var endScene: EndGameScene?
     var backGround: SKSpriteNode?
     var character : Character?
     var touristSpots: [TouristSpot]?
@@ -46,6 +47,8 @@ class GameScene: SKScene {
         setUpStateMachine()
         self.touristSpots = [TouristSpot]()
         setUpTouristSpots()
+        
+        endScene = EndGameScene(size: self.size)
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -107,7 +110,9 @@ extension GameScene{
         }else{
             switch event.keyCode {
             case 53:
-                self.stateMachine?.enter(SceneNormal.self)
+                if self.character?.position != CGPoint(x: 270, y: 60.0){
+                    self.stateMachine?.enter(SceneNormal.self)
+                }
             default:
                 print("keyDown: \(event.characters!) keyCode: \(event.keyCode)")
             }

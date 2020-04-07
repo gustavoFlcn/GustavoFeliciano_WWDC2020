@@ -29,18 +29,7 @@ class ViewController: NSViewController {
                 // Present the scene
                 view.presentScene(initialScene)
             }
-            
-            
-//            view.ignoresSiblingOrder = true
-//
-//            view.showsFPS = true
-//            view.showsNodeCount = true
         }
     }
-}
-
-//MARK: Keyboard inputs
-extension ViewController{
-    
 }
 
