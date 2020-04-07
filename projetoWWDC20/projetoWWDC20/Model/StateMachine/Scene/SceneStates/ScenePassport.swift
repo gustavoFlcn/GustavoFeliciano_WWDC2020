@@ -23,6 +23,7 @@ class  ScenePassport: SceneState{
     
     override func willExit(to nextState: GKState) {
         self.sceneGame.character?.removeAllActions()
+        self.sceneGame.passportPopUp?.keyEsc?.alpha = 0
     }
     
     func showStickerInPassport(){
@@ -49,6 +50,7 @@ class  ScenePassport: SceneState{
         default:
             break
         }
+        self.sceneGame.passportPopUp?.keyEsc?.run(sequence)
     }
     
 }

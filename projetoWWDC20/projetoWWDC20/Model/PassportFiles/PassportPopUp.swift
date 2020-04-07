@@ -34,6 +34,7 @@ class PassportPopUp: SKNode{
         keyEsc?.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         keyEsc?.setScale(0.2)
         keyEsc?.zPosition = 3
+        keyEsc?.alpha = 0
         keyEsc?.position = CGPoint(x: -320, y: 250)
         
         super.init()
