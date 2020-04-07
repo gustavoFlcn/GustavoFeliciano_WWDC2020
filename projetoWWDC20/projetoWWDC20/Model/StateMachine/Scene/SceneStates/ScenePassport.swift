@@ -21,4 +21,6 @@ class  ScenePassport: SceneState{
     override func willExit(to nextState: GKState) {
         self.sceneGame.character?.removeAllActions()
     }
+    
+    
 }

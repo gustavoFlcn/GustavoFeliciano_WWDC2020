@@ -76,22 +76,30 @@ extension GameScene{
 extension GameScene{
     // Detect the event in kayboard
     override func keyDown(with event: NSEvent) {
-        switch event.keyCode {
-        case 124:
-            self.character?.moveToRight()
-        case 123:
-            self.character?.moveToLeft()
-        case 125:
-           self.character?.moveToDown()
-        case 126:
-            self.character?.moveToUp()
-        case 53:
-            guard let currentState = self.stateMachine?.currentState else {return}
-            if currentState is SceneTourist || currentState is ScenePassport{
-                self.stateMachine?.enter(SceneNormal.self)
+        guard let currentState = self.stateMachine?.currentState else {return}
+        if currentState is SceneNormal {
+            switch event.keyCode {
+            case 124:
+                self.character?.moveToRight()
+            case 123:
+                self.character?.moveToLeft()
+            case 125:
+               self.character?.moveToDown()
+            case 126:
+                self.character?.moveToUp()
+            default:
+                print("keyDown: \(event.characters!) keyCode: \(event.keyCode)")
             }
-        default:
-            print("keyDown: \(event.characters!) keyCode: \(event.keyCode)")
+        }else if currentState is SceneTourist {
+            switch event.keyCode {
+            case 53:
+                self.stateMachine?.enter(SceneNormal.self)
+            case 36:
+                SceneTourist.countPressedEnter += 1
+                print(SceneTourist.countPressedEnter)
+            default:
+                print("keyDown: \(event.characters!) keyCode: \(event.keyCode)")
+            }
         }
     }
 }

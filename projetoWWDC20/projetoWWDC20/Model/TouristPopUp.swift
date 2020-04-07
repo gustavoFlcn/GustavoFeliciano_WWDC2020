@@ -48,12 +48,12 @@ class TouristPopUp: SKNode{
         
         dialogBallon = SKSpriteNode(imageNamed: "dialogBallon")
         dialogBallon?.anchorPoint = CGPoint(x: 0.5, y: 0.5)
-        dialogBallon?.size = CGSize(width: 550, height: 100)
+        dialogBallon?.size = CGSize(width: 600, height: 150)
         dialogBallon?.zPosition = 3
-        dialogBallon?.position = CGPoint(x: -50, y: -150)
+        dialogBallon?.position = CGPoint(x: -80, y: -150)
         
-        localDescription = SKLabelNode(text: "Esse aqui é um teste de Label")
-        localDescription?.fontSize = 30
+        localDescription = SKLabelNode()
+        localDescription?.fontSize = 21
         localDescription?.fontColor = #colorLiteral(red: 0.7490196078, green: 0.4823529412, blue: 0.1215686275, alpha: 1)
         localDescription?.fontName = "Chalkboard SE"
         localDescription?.position = CGPoint(x: -10, y: -5)
