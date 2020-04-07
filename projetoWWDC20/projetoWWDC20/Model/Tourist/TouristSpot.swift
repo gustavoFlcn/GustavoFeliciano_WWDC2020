@@ -10,7 +10,6 @@ import GameplayKit
 
 
 class TouristSpot: SKSpriteNode{
-    
     public var stateMachine: GKStateMachine?
     
     func setUpSpot(){
