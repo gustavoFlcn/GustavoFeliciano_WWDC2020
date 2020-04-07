@@ -14,7 +14,8 @@ class GameScene: SKScene {
     var character : Character?
     var touristSpots: [TouristSpot]?
     var stateMachine: GKStateMachine?
-    var popUp: TouristPopUp?
+    var touristPopUp: TouristPopUp?
+    var passportPopUp: PassportPopUp?
     
     
     override func didMove(to view: SKView) {
@@ -32,10 +33,15 @@ class GameScene: SKScene {
         self.character?.size = CGSize(width: self.size.height*0.09, height: self.size.height*0.16)
         self.addChild(character!)
         
-        self.popUp = TouristPopUp()
-        self.popUp?.position = CGPoint(x: 0, y: 0)
-        self.popUp?.zPosition = 4
-        self.addChild(popUp!)
+        self.touristPopUp = TouristPopUp()
+        self.touristPopUp?.position = CGPoint(x: 0, y: 0)
+        self.touristPopUp?.zPosition = 4
+        self.addChild(touristPopUp!)
+        
+        self.passportPopUp = PassportPopUp()
+        self.passportPopUp?.position = CGPoint(x: 0, y: 0)
+        self.passportPopUp?.zPosition = 4
+        self.addChild(passportPopUp!)
         
         setUpStateMachine()
         self.touristSpots = [TouristSpot]()
@@ -92,11 +98,16 @@ extension GameScene{
             }
         }else if currentState is SceneTourist {
             switch event.keyCode {
+            case 36:
+                self.stateMachine?.enter(ScenePassport.self)
+                break
+            default:
+                print("keyDown: \(event.characters!) keyCode: \(event.keyCode)")
+            }
+        }else{
+            switch event.keyCode {
             case 53:
                 self.stateMachine?.enter(SceneNormal.self)
-            case 36:
-                SceneTourist.countPressedEnter += 1
-                print(SceneTourist.countPressedEnter)
             default:
                 print("keyDown: \(event.characters!) keyCode: \(event.keyCode)")
             }

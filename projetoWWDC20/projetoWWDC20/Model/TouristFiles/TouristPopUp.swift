@@ -14,7 +14,7 @@ class TouristPopUp: SKNode{
     var sceneGame: GameScene?
     var blurPopUp: SKSpriteNode?
     var stickerTouristSpot: SKSpriteNode?
-    var keyEsc: SKSpriteNode?
+    var keyEnter: SKSpriteNode?
     var touristGuide: SKSpriteNode?
     var localDescription: SKLabelNode?
     var dialogBallon: SKSpriteNode?
@@ -28,11 +28,11 @@ class TouristPopUp: SKNode{
         blurPopUp?.alpha = 0.5
         blurPopUp?.position = CGPoint(x: 0, y: 0)
         
-        keyEsc = SKSpriteNode(imageNamed: "esc")
-        keyEsc?.anchorPoint = CGPoint(x: 0.5, y: 0.5)
-        keyEsc?.size = CGSize(width: 80, height: 50)
-        keyEsc?.zPosition = 3
-        keyEsc?.position = CGPoint(x: -320, y: 250)
+        keyEnter = SKSpriteNode(imageNamed: "enter")
+        keyEnter?.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+        keyEnter?.setScale(0.2)
+        keyEnter?.zPosition = 3
+        keyEnter?.position = CGPoint(x: 320, y: 250)
         
         stickerTouristSpot = SKSpriteNode(imageNamed: "igrejinhaSticker")
         stickerTouristSpot?.anchorPoint = CGPoint(x: 0.5, y: 0.5)
@@ -66,7 +66,7 @@ class TouristPopUp: SKNode{
         self.alpha = 0
         self.addChild(blurPopUp!)
         self.addChild(stickerTouristSpot!)
-        self.addChild(keyEsc!)
+        self.addChild(keyEnter!)
         self.addChild(touristGuide!)
         self.addChild(dialogBallon!)
         self.dialogBallon?.addChild(localDescription!)
