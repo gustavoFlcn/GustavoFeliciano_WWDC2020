@@ -21,23 +21,25 @@ class TouristPopUp: SKNode{
     
     override init() {
         blurPopUp = SKSpriteNode()
-        blurPopUp?.color = .white
+        blurPopUp?.color = .black
         blurPopUp?.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         blurPopUp?.zPosition = 0
         blurPopUp?.size = CGSize(width: 800, height: 600)
         blurPopUp?.alpha = 0.5
         blurPopUp?.position = CGPoint(x: 0, y: 0)
         
-        stickerTouristSpot = SKSpriteNode(imageNamed: "stickerTeste")
-        stickerTouristSpot?.anchorPoint = CGPoint(x: 0.5, y: 0.5)
-        stickerTouristSpot?.zPosition = 3
-        stickerTouristSpot?.position = CGPoint(x: 0, y: 0)
-        
         keyEsc = SKSpriteNode(imageNamed: "esc")
         keyEsc?.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         keyEsc?.size = CGSize(width: 80, height: 50)
         keyEsc?.zPosition = 3
-        keyEsc?.position = CGPoint(x: 100, y: 130)
+        keyEsc?.position = CGPoint(x: -320, y: 250)
+        
+        stickerTouristSpot = SKSpriteNode(imageNamed: "igrejinhaSticker")
+        stickerTouristSpot?.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+        stickerTouristSpot?.size = CGSize(width: 280, height: 300)
+        stickerTouristSpot?.zPosition = 3
+        stickerTouristSpot?.position = CGPoint(x: 0, y: 80)
+        
         
         touristGuide = SKSpriteNode(imageNamed: "touristGuide")
         touristGuide?.anchorPoint = CGPoint(x: 0.5, y: 0.5)
@@ -56,6 +58,8 @@ class TouristPopUp: SKNode{
         localDescription?.fontSize = 21
         localDescription?.fontColor = #colorLiteral(red: 0.7490196078, green: 0.4823529412, blue: 0.1215686275, alpha: 1)
         localDescription?.fontName = "Chalkboard SE"
+        localDescription?.numberOfLines = 0
+        localDescription?.position = CGPoint(x: -20, y: -50)
         localDescription?.position = CGPoint(x: -10, y: -5)
 
         super.init()
