@@ -60,7 +60,6 @@ class TouristPopUp: SKNode{
         localDescription?.fontName = "Chalkboard SE"
         localDescription?.numberOfLines = 0
         localDescription?.position = CGPoint(x: -20, y: -50)
-        localDescription?.position = CGPoint(x: -10, y: -5)
 
         super.init()
         self.alpha = 0

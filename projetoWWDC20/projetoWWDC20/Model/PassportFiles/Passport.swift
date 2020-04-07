@@ -29,19 +29,19 @@ class Passport: SKSpriteNode {
         self.stickerSantuario.setScale(0.3)
         self.stickerSantuario.alpha = 0
         
-        self.stickerRuaAlegria = SKSpriteNode(imageNamed: "igrejinhaSticker")
+        self.stickerRuaAlegria = SKSpriteNode(imageNamed: "ruaAlegria")
         self.stickerRuaAlegria.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         self.stickerRuaAlegria.position = CGPoint(x: -100, y: -150)
         self.stickerRuaAlegria.setScale(0.3)
         self.stickerRuaAlegria.alpha = 0
 
-        self.stickerFeira = SKSpriteNode(imageNamed: "igrejinhaSticker")
+        self.stickerFeira = SKSpriteNode(imageNamed: "feira")
         self.stickerFeira.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         self.stickerFeira.position = CGPoint(x: 95, y: -50)
         self.stickerFeira.setScale(0.3)
         self.stickerFeira.alpha = 0
         
-        self.stickerMinhaCasa = SKSpriteNode(imageNamed: "igrejinhaSticker")
+        self.stickerMinhaCasa = SKSpriteNode(imageNamed: "minhaCasa")
         self.stickerMinhaCasa.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         self.stickerMinhaCasa.position = CGPoint(x: 105, y: -160)
         self.stickerMinhaCasa.setScale(0.3)

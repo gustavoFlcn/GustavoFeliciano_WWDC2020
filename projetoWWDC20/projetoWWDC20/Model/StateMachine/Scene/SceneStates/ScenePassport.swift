@@ -45,7 +45,15 @@ class  ScenePassport: SceneState{
             passport?.stickerFeira.run(sequence)
             break
         case CGPoint(x: 270, y: 60.0):
-            passport?.stickerMinhaCasa.run(sequence)
+            self.sceneGame.passportPopUp?.keyEsc?.isHidden = true
+            passport?.stickerMinhaCasa.run(sequence){
+                if let scene = self.sceneGame.endScene{
+                    scene.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+                    scene.position = CGPoint(x: 0, y: 0)
+                    // Present the scene
+                    self.sceneGame.view!.presentScene(scene, transition: SKTransition.crossFade(withDuration: 2))
+                }
+            }
             break
         default:
             break

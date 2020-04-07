@@ -19,6 +19,7 @@
 		EB31CBB9243C2FE00060E649 /* PassportPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31CBB8243C2FE00060E649 /* PassportPopUp.swift */; };
 		EB31CBBB243C3B440060E649 /* Passport.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31CBBA243C3B440060E649 /* Passport.swift */; };
 		EB31CBBD243C6B480060E649 /* initialGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31CBBC243C6B480060E649 /* initialGameScene.swift */; };
+		EB31CBBF243C80CF0060E649 /* EndGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31CBBE243C80CF0060E649 /* EndGameScene.swift */; };
 		EB3E66CF243A7F7B00874DA4 /* TouristPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3E66CE243A7F7B00874DA4 /* TouristPopUp.swift */; };
 		EBD6BE61242E7E1E0020A612 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD6BE60242E7E1E0020A612 /* AppDelegate.swift */; };
 		EBD6BE67242E7E1E0020A612 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD6BE66242E7E1E0020A612 /* GameScene.swift */; };
@@ -41,6 +42,7 @@
 		EB31CBB8243C2FE00060E649 /* PassportPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassportPopUp.swift; sourceTree = "<group>"; };
 		EB31CBBA243C3B440060E649 /* Passport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passport.swift; sourceTree = "<group>"; };
 		EB31CBBC243C6B480060E649 /* initialGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = initialGameScene.swift; sourceTree = "<group>"; };
+		EB31CBBE243C80CF0060E649 /* EndGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGameScene.swift; sourceTree = "<group>"; };
 		EB3E66CE243A7F7B00874DA4 /* TouristPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouristPopUp.swift; sourceTree = "<group>"; };
 		EBD6BE5D242E7E1E0020A612 /* projetoWWDC20.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projetoWWDC20.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBD6BE60242E7E1E0020A612 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				EBD6BE6C242E7E1F0020A612 /* Main.storyboard */,
 				EBD6BE66242E7E1E0020A612 /* GameScene.swift */,
 				EB31CBBC243C6B480060E649 /* initialGameScene.swift */,
+				EB31CBBE243C80CF0060E649 /* EndGameScene.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				EB173B1C24365E4300867DB4 /* ScenePassport.swift in Sources */,
 				EBD6BE7C242E82AB0020A612 /* Character.swift in Sources */,
 				EB146AB82433863900180D58 /* Visited.swift in Sources */,
+				EB31CBBF243C80CF0060E649 /* EndGameScene.swift in Sources */,
 				EB146ABC2433881200180D58 /* PointState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
