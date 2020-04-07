@@ -54,6 +54,4 @@ class EndGameScene: SKScene{
         self.addChild(tutorDevName!)
         self.addChild(tutorDesignName!)
     }
-    
-    
 }

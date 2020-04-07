@@ -10,7 +10,6 @@ import SpriteKit
 import GameplayKit
 
 class  SceneTourist: SceneState{
-    static var countPressedEnter = 0
     private let localDescription = LocalDescriptions()
     
     override func isValidNextState(_ stateClass: AnyClass) -> Bool {
@@ -29,7 +28,6 @@ class  SceneTourist: SceneState{
         self.sceneGame.character?.removeAllActions()
         self.sceneGame.touristPopUp?.isPaused = true
         self.sceneGame.touristPopUp?.alpha = 0
-        SceneTourist.countPressedEnter = 0
     }
     
     func selectTouristSpot(){
