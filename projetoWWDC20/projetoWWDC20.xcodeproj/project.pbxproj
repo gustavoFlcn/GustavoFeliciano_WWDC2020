@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EB146AB82433863900180D58 /* Visited.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB146AB72433863900180D58 /* Visited.swift */; };
+		EB146ABA2433864B00180D58 /* NotVisited.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB146AB92433864B00180D58 /* NotVisited.swift */; };
+		EB146ABC2433881200180D58 /* PointState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB146ABB2433881200180D58 /* PointState.swift */; };
+		EB173B1A24365E3400867DB4 /* SceneTouristSpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB173B1924365E3400867DB4 /* SceneTouristSpot.swift */; };
+		EB173B1C24365E4300867DB4 /* ScenePassport.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB173B1B24365E4300867DB4 /* ScenePassport.swift */; };
+		EB173B1E24365FD200867DB4 /* SceneState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB173B1D24365FD200867DB4 /* SceneState.swift */; };
+		EB173B202436615A00867DB4 /* SceneNormal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB173B1F2436615A00867DB4 /* SceneNormal.swift */; };
+		EB1F004124327216000A3751 /* TouristSpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1F004024327216000A3751 /* TouristSpot.swift */; };
+		EB31CBB4243C10580060E649 /* LocalDescriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31CBB3243C10580060E649 /* LocalDescriptions.swift */; };
+		EB31CBB9243C2FE00060E649 /* PassportPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31CBB8243C2FE00060E649 /* PassportPopUp.swift */; };
+		EB31CBBB243C3B440060E649 /* Passport.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31CBBA243C3B440060E649 /* Passport.swift */; };
+		EB31CBBD243C6B480060E649 /* initialGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31CBBC243C6B480060E649 /* initialGameScene.swift */; };
+		EB31CBBF243C80CF0060E649 /* EndGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31CBBE243C80CF0060E649 /* EndGameScene.swift */; };
+		EB3E66CF243A7F7B00874DA4 /* TouristPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3E66CE243A7F7B00874DA4 /* TouristPopUp.swift */; };
+		EBD6BE61242E7E1E0020A612 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD6BE60242E7E1E0020A612 /* AppDelegate.swift */; };
+		EBD6BE67242E7E1E0020A612 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD6BE66242E7E1E0020A612 /* GameScene.swift */; };
+		EBD6BE69242E7E1E0020A612 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD6BE68242E7E1E0020A612 /* ViewController.swift */; };
+		EBD6BE6B242E7E1F0020A612 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBD6BE6A242E7E1F0020A612 /* Assets.xcassets */; };
+		EBD6BE6E242E7E1F0020A612 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBD6BE6C242E7E1F0020A612 /* Main.storyboard */; };
+		EBD6BE7C242E82AB0020A612 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD6BE7B242E82AB0020A612 /* Character.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EB146AB72433863900180D58 /* Visited.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visited.swift; sourceTree = "<group>"; };
+		EB146AB92433864B00180D58 /* NotVisited.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotVisited.swift; sourceTree = "<group>"; };
+		EB146ABB2433881200180D58 /* PointState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointState.swift; sourceTree = "<group>"; };
+		EB173B1924365E3400867DB4 /* SceneTouristSpot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneTouristSpot.swift; sourceTree = "<group>"; };
+		EB173B1B24365E4300867DB4 /* ScenePassport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenePassport.swift; sourceTree = "<group>"; };
+		EB173B1D24365FD200867DB4 /* SceneState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneState.swift; sourceTree = "<group>"; };
+		EB173B1F2436615A00867DB4 /* SceneNormal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneNormal.swift; sourceTree = "<group>"; };
+		EB1F004024327216000A3751 /* TouristSpot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouristSpot.swift; sourceTree = "<group>"; };
+		EB31CBB3243C10580060E649 /* LocalDescriptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDescriptions.swift; sourceTree = "<group>"; };
+		EB31CBB8243C2FE00060E649 /* PassportPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassportPopUp.swift; sourceTree = "<group>"; };
+		EB31CBBA243C3B440060E649 /* Passport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passport.swift; sourceTree = "<group>"; };
+		EB31CBBC243C6B480060E649 /* initialGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = initialGameScene.swift; sourceTree = "<group>"; };
+		EB31CBBE243C80CF0060E649 /* EndGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGameScene.swift; sourceTree = "<group>"; };
+		EB3E66CE243A7F7B00874DA4 /* TouristPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouristPopUp.swift; sourceTree = "<group>"; };
+		EBD6BE5D242E7E1E0020A612 /* projetoWWDC20.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projetoWWDC20.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBD6BE60242E7E1E0020A612 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EBD6BE66242E7E1E0020A612 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		EBD6BE68242E7E1E0020A612 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EBD6BE6A242E7E1F0020A612 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EBD6BE6D242E7E1F0020A612 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EBD6BE6F242E7E1F0020A612 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBD6BE70242E7E1F0020A612 /* projetoWWDC20.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = projetoWWDC20.entitlements; sourceTree = "<group>"; };
+		EBD6BE7B242E82AB0020A612 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EBD6BE5A242E7E1E0020A612 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EB146AB6243385A200180D58 /* SpotStates */ = {
+			isa = PBXGroup;
+			children = (
+				EB146AB72433863900180D58 /* Visited.swift */,
+				EB146AB92433864B00180D58 /* NotVisited.swift */,
+			);
+			path = SpotStates;
+			sourceTree = "<group>";
+		};
+		EB173B1824365E0900867DB4 /* SceneStates */ = {
+			isa = PBXGroup;
+			children = (
+				EB173B1924365E3400867DB4 /* SceneTouristSpot.swift */,
+				EB173B1B24365E4300867DB4 /* ScenePassport.swift */,
+				EB173B1F2436615A00867DB4 /* SceneNormal.swift */,
+			);
+			path = SceneStates;
+			sourceTree = "<group>";
+		};
+		EB1F004424329229000A3751 /* StateMachine */ = {
+			isa = PBXGroup;
+			children = (
+				EB3E66D1243A807800874DA4 /* Point */,
+				EB3E66D0243A806600874DA4 /* Scene */,
+			);
+			path = StateMachine;
+			sourceTree = "<group>";
+		};
+		EB24503824326066005DD956 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EB31CBB7243C2DBB0060E649 /* PassportFiles */,
+				EB31CBB6243C2D750060E649 /* TouristFiles */,
+				EB1F004424329229000A3751 /* StateMachine */,
+				EBD6BE7B242E82AB0020A612 /* Character.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EB24503924326070005DD956 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EBD6BE60242E7E1E0020A612 /* AppDelegate.swift */,
+				EBD6BE68242E7E1E0020A612 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EB31CBB6243C2D750060E649 /* TouristFiles */ = {
+			isa = PBXGroup;
+			children = (
+				EB31CBB3243C10580060E649 /* LocalDescriptions.swift */,
+				EB1F004024327216000A3751 /* TouristSpot.swift */,
+				EB3E66CE243A7F7B00874DA4 /* TouristPopUp.swift */,
+			);
+			path = TouristFiles;
+			sourceTree = "<group>";
+		};
+		EB31CBB7243C2DBB0060E649 /* PassportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				EB31CBB8243C2FE00060E649 /* PassportPopUp.swift */,
+				EB31CBBA243C3B440060E649 /* Passport.swift */,
+			);
+			path = PassportFiles;
+			sourceTree = "<group>";
+		};
+		EB3E66D0243A806600874DA4 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				EB173B1D24365FD200867DB4 /* SceneState.swift */,
+				EB173B1824365E0900867DB4 /* SceneStates */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		EB3E66D1243A807800874DA4 /* Point */ = {
+			isa = PBXGroup;
+			children = (
+				EB146ABB2433881200180D58 /* PointState.swift */,
+				EB146AB6243385A200180D58 /* SpotStates */,
+			);
+			path = Point;
+			sourceTree = "<group>";
+		};
+		EB6DE4CA24322FFA00669A69 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EBD6BE6C242E7E1F0020A612 /* Main.storyboard */,
+				EBD6BE66242E7E1E0020A612 /* GameScene.swift */,
+				EB31CBBC243C6B480060E649 /* initialGameScene.swift */,
+				EB31CBBE243C80CF0060E649 /* EndGameScene.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EBD6BE54242E7E1D0020A612 = {
+			isa = PBXGroup;
+			children = (
+				EBD6BE5F242E7E1E0020A612 /* projetoWWDC20 */,
+				EBD6BE5E242E7E1E0020A612 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EBD6BE5E242E7E1E0020A612 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EBD6BE5D242E7E1E0020A612 /* projetoWWDC20.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EBD6BE5F242E7E1E0020A612 /* projetoWWDC20 */ = {
+			isa = PBXGroup;
+			children = (
+				EB24503924326070005DD956 /* Controller */,
+				EB24503824326066005DD956 /* Model */,
+				EB6DE4CA24322FFA00669A69 /* View */,
+				EBD6BE6A242E7E1F0020A612 /* Assets.xcassets */,
+				EBD6BE6F242E7E1F0020A612 /* Info.plist */,
+				EBD6BE70242E7E1F0020A612 /* projetoWWDC20.entitlements */,
+			);
+			path = projetoWWDC20;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EBD6BE5C242E7E1E0020A612 /* projetoWWDC20 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBD6BE73242E7E1F0020A612 /* Build configuration list for PBXNativeTarget "projetoWWDC20" */;
+			buildPhases = (
+				EBD6BE59242E7E1E0020A612 /* Sources */,
+				EBD6BE5A242E7E1E0020A612 /* Frameworks */,
+				EBD6BE5B242E7E1E0020A612 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = projetoWWDC20;
+			productName = projetoWWDC20;
+			productReference = EBD6BE5D242E7E1E0020A612 /* projetoWWDC20.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EBD6BE55242E7E1D0020A612 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Gustavo Feliciano Figueiredo";
+				TargetAttributes = {
+					EBD6BE5C242E7E1E0020A612 = {
+						CreatedOnToolsVersion = 11.4;
+					};
+				};
+			};
+			buildConfigurationList = EBD6BE58242E7E1D0020A612 /* Build configuration list for PBXProject "projetoWWDC20" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EBD6BE54242E7E1D0020A612;
+			productRefGroup = EBD6BE5E242E7E1E0020A612 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EBD6BE5C242E7E1E0020A612 /* projetoWWDC20 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EBD6BE5B242E7E1E0020A612 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBD6BE6B242E7E1F0020A612 /* Assets.xcassets in Resources */,
+				EBD6BE6E242E7E1F0020A612 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EBD6BE59242E7E1E0020A612 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB173B1E24365FD200867DB4 /* SceneState.swift in Sources */,
+				EBD6BE69242E7E1E0020A612 /* ViewController.swift in Sources */,
+				EB31CBB4243C10580060E649 /* LocalDescriptions.swift in Sources */,
+				EB1F004124327216000A3751 /* TouristSpot.swift in Sources */,
+				EB31CBB9243C2FE00060E649 /* PassportPopUp.swift in Sources */,
+				EB31CBBB243C3B440060E649 /* Passport.swift in Sources */,
+				EB3E66CF243A7F7B00874DA4 /* TouristPopUp.swift in Sources */,
+				EB173B202436615A00867DB4 /* SceneNormal.swift in Sources */,
+				EB173B1A24365E3400867DB4 /* SceneTouristSpot.swift in Sources */,
+				EB31CBBD243C6B480060E649 /* initialGameScene.swift in Sources */,
+				EBD6BE67242E7E1E0020A612 /* GameScene.swift in Sources */,
+				EBD6BE61242E7E1E0020A612 /* AppDelegate.swift in Sources */,
+				EB146ABA2433864B00180D58 /* NotVisited.swift in Sources */,
+				EB173B1C24365E4300867DB4 /* ScenePassport.swift in Sources */,
+				EBD6BE7C242E82AB0020A612 /* Character.swift in Sources */,
+				EB146AB82433863900180D58 /* Visited.swift in Sources */,
+				EB31CBBF243C80CF0060E649 /* EndGameScene.swift in Sources */,
+				EB146ABC2433881200180D58 /* PointState.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EBD6BE6C242E7E1F0020A612 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBD6BE6D242E7E1F0020A612 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EBD6BE71242E7E1F0020A612 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EBD6BE72242E7E1F0020A612 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		EBD6BE74242E7E1F0020A612 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = projetoWWDC20/projetoWWDC20.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 7R7SUH3884;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = projetoWWDC20/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = GustavoFeliciano.projetoWWDC20;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		EBD6BE75242E7E1F0020A612 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = projetoWWDC20/projetoWWDC20.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 7R7SUH3884;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = projetoWWDC20/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = GustavoFeliciano.projetoWWDC20;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EBD6BE58242E7E1D0020A612 /* Build configuration list for PBXProject "projetoWWDC20" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBD6BE71242E7E1F0020A612 /* Debug */,
+				EBD6BE72242E7E1F0020A612 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBD6BE73242E7E1F0020A612 /* Build configuration list for PBXNativeTarget "projetoWWDC20" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBD6BE74242E7E1F0020A612 /* Debug */,
+				EBD6BE75242E7E1F0020A612 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EBD6BE55242E7E1D0020A612 /* Project object */;
+}
