@@ -13,34 +13,23 @@ import GameplayKit
 class ViewController: NSViewController {
 
     @IBOutlet var skView: SKView!
-    var scene: GameScene?
+    var scene: InitialGameScene?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         if let view = self.skView {
             // Load the GameScene
-            self.scene = GameScene(size: CGSize(width: view.frame.width, height: view.frame.height))
+            self.scene = InitialGameScene(size: CGSize(width: view.frame.width, height: view.frame.height))
             
-            if let gameScene = scene{
-                gameScene.anchorPoint = CGPoint(x: 0.5, y: 0.5)
-                gameScene.position = CGPoint(x: 0, y: 0)
+            if let initialScene = scene{
+                initialScene.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+                initialScene.position = CGPoint(x: 0, y: 0)
                 
                 // Present the scene
-                view.presentScene(gameScene)
+                view.presentScene(initialScene)
             }
-            
-            
-//            view.ignoresSiblingOrder = true
-//
-//            view.showsFPS = true
-//            view.showsNodeCount = true
         }
     }
-}
-
-//MARK: Keyboard inputs
-extension ViewController{
-    
 }
 

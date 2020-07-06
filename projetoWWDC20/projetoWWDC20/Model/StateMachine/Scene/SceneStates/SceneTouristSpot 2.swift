@@ -10,24 +10,26 @@ import SpriteKit
 import GameplayKit
 
 class  SceneTourist: SceneState{
+    static var countPressedEnter = 0
     private let localDescription = LocalDescriptions()
     
     override func isValidNextState(_ stateClass: AnyClass) -> Bool {
-        return stateClass is ScenePassport.Type
+        return stateClass is SceneNormal.Type
     }
     
     override func didEnter(from previousState: GKState?) {
         self.sceneGame.character?.isPaused = true
-        self.sceneGame.touristPopUp?.isPaused = false
+        self.sceneGame.popUp?.isPaused = false
         let showPopUp = SKAction.fadeAlpha(to: 1.0, duration: 0.3)
-        self.sceneGame.touristPopUp?.run(showPopUp)
+        self.sceneGame.popUp?.run(showPopUp)
         selectTouristSpot()
     }
     
     override func willExit(to nextState: GKState) {
         self.sceneGame.character?.removeAllActions()
-        self.sceneGame.touristPopUp?.isPaused = true
-        self.sceneGame.touristPopUp?.alpha = 0
+        self.sceneGame.popUp?.isPaused = true
+        self.sceneGame.popUp?.alpha = 0
+        SceneTourist.countPressedEnter = 0
     }
     
     func selectTouristSpot(){
@@ -62,28 +64,28 @@ class  SceneTourist: SceneState{
     }
     
     func selectPopUpInformations(touristPointNumber: Int){
-        self.sceneGame.touristPopUp?.localDescription?.numberOfLines = 0
-        self.sceneGame.touristPopUp?.localDescription?.position = CGPoint(x: -20, y: -50)
+        self.sceneGame.popUp?.localDescription?.numberOfLines = 0
+        self.sceneGame.popUp?.localDescription?.position = CGPoint(x: -20, y: -50)
         switch touristPointNumber {
         case 1:
-            self.sceneGame.touristPopUp?.localDescription?.text = localDescription.igrejinha
-            self.sceneGame.touristPopUp?.stickerTouristSpot?.texture = SKTexture(imageNamed: "igrejinhaSticker")
+            self.sceneGame.popUp?.localDescription?.text = localDescription.igrejinha
+            self.sceneGame.popUp?.stickerTouristSpot?.texture = SKTexture(imageNamed: "igrejinhaSticker")
             break
         case 2:
-            self.sceneGame.touristPopUp?.localDescription?.text = localDescription.santuario
-            self.sceneGame.touristPopUp?.stickerTouristSpot?.texture = SKTexture(imageNamed: "santuarioSticker")
+            self.sceneGame.popUp?.localDescription?.text = localDescription.santuario
+            self.sceneGame.popUp?.stickerTouristSpot?.texture = SKTexture(imageNamed: "santuarioSticker")
             break
         case 3:
-            self.sceneGame.touristPopUp?.localDescription?.text = localDescription.ruaDaAlegria
-            self.sceneGame.touristPopUp?.stickerTouristSpot?.texture = SKTexture(imageNamed: "ruaAlegria")
+            self.sceneGame.popUp?.localDescription?.text = localDescription.ruaDaAlegria
+            self.sceneGame.popUp?.stickerTouristSpot?.texture = SKTexture(imageNamed: "stickerTeste")
             break
         case 4:
-            self.sceneGame.touristPopUp?.localDescription?.text = localDescription.feira
-            self.sceneGame.touristPopUp?.stickerTouristSpot?.texture = SKTexture(imageNamed: "feira")
+            self.sceneGame.popUp?.localDescription?.text = localDescription.feira
+            self.sceneGame.popUp?.stickerTouristSpot?.texture = SKTexture(imageNamed: "stickerTeste")
             break
         case 5:
-            self.sceneGame.touristPopUp?.localDescription?.text = localDescription.minhaCasa
-            self.sceneGame.touristPopUp?.stickerTouristSpot?.texture = SKTexture(imageNamed: "minhaCasa")
+            self.sceneGame.popUp?.localDescription?.text = localDescription.minhaCasa
+            self.sceneGame.popUp?.stickerTouristSpot?.texture = SKTexture(imageNamed: "stickerTeste")
             break
         default:
             break

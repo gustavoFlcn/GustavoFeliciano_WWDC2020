@@ -1,5 +1,5 @@
 //
-//  SceneNormal.swift
+//  ScenePassport.swift
 //  projetoWWDC20
 //
 //  Created by Gustavo Feliciano Figueiredo on 02/04/20.
@@ -9,13 +9,18 @@
 import SpriteKit
 import GameplayKit
 
-class  SceneNormal: SceneState{
+class  ScenePassport: SceneState{
     override func isValidNextState(_ stateClass: AnyClass) -> Bool {
-        return stateClass is SceneTourist.Type || stateClass is ScenePassport.Type
+        return stateClass is SceneNormal.Type
     }
     
     override func didEnter(from previousState: GKState?) {
-        self.sceneGame.character?.isPaused = false
-        self.sceneGame.passportPopUp?.isHidden = true
+        self.sceneGame.character?.isPaused = true
     }
+    
+    override func willExit(to nextState: GKState) {
+        self.sceneGame.character?.removeAllActions()
+    }
+    
+    
 }

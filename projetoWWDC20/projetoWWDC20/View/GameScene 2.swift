@@ -10,13 +10,11 @@ import SpriteKit
 import GameplayKit
 
 class GameScene: SKScene {
-    var endScene: EndGameScene?
     var backGround: SKSpriteNode?
     var character : Character?
     var touristSpots: [TouristSpot]?
     var stateMachine: GKStateMachine?
-    var touristPopUp: TouristPopUp?
-    var passportPopUp: PassportPopUp?
+    var popUp: TouristPopUp?
     
     
     override func didMove(to view: SKView) {
@@ -34,21 +32,14 @@ class GameScene: SKScene {
         self.character?.size = CGSize(width: self.size.height*0.09, height: self.size.height*0.16)
         self.addChild(character!)
         
-        self.touristPopUp = TouristPopUp()
-        self.touristPopUp?.position = CGPoint(x: 0, y: 0)
-        self.touristPopUp?.zPosition = 4
-        self.addChild(touristPopUp!)
-        
-        self.passportPopUp = PassportPopUp()
-        self.passportPopUp?.position = CGPoint(x: 0, y: 0)
-        self.passportPopUp?.zPosition = 4
-        self.addChild(passportPopUp!)
+        self.popUp = TouristPopUp()
+        self.popUp?.position = CGPoint(x: 0, y: 0)
+        self.popUp?.zPosition = 4
+        self.addChild(popUp!)
         
         setUpStateMachine()
         self.touristSpots = [TouristSpot]()
         setUpTouristSpots()
-        
-        endScene = EndGameScene(size: self.size)
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -101,18 +92,11 @@ extension GameScene{
             }
         }else if currentState is SceneTourist {
             switch event.keyCode {
-            case 36:
-                self.stateMachine?.enter(ScenePassport.self)
-                break
-            default:
-                print("keyDown: \(event.characters!) keyCode: \(event.keyCode)")
-            }
-        }else{
-            switch event.keyCode {
             case 53:
-                if self.character?.position != CGPoint(x: 270, y: 60.0){
-                    self.stateMachine?.enter(SceneNormal.self)
-                }
+                self.stateMachine?.enter(SceneNormal.self)
+            case 36:
+                SceneTourist.countPressedEnter += 1
+                print(SceneTourist.countPressedEnter)
             default:
                 print("keyDown: \(event.characters!) keyCode: \(event.keyCode)")
             }

@@ -16,6 +16,10 @@
 		EB173B202436615A00867DB4 /* SceneNormal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB173B1F2436615A00867DB4 /* SceneNormal.swift */; };
 		EB1F004124327216000A3751 /* TouristSpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1F004024327216000A3751 /* TouristSpot.swift */; };
 		EB31CBB4243C10580060E649 /* LocalDescriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31CBB3243C10580060E649 /* LocalDescriptions.swift */; };
+		EB31CBB9243C2FE00060E649 /* PassportPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31CBB8243C2FE00060E649 /* PassportPopUp.swift */; };
+		EB31CBBB243C3B440060E649 /* Passport.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31CBBA243C3B440060E649 /* Passport.swift */; };
+		EB31CBBD243C6B480060E649 /* initialGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31CBBC243C6B480060E649 /* initialGameScene.swift */; };
+		EB31CBBF243C80CF0060E649 /* EndGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31CBBE243C80CF0060E649 /* EndGameScene.swift */; };
 		EB3E66CF243A7F7B00874DA4 /* TouristPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3E66CE243A7F7B00874DA4 /* TouristPopUp.swift */; };
 		EBD6BE61242E7E1E0020A612 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD6BE60242E7E1E0020A612 /* AppDelegate.swift */; };
 		EBD6BE67242E7E1E0020A612 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD6BE66242E7E1E0020A612 /* GameScene.swift */; };
@@ -35,6 +39,10 @@
 		EB173B1F2436615A00867DB4 /* SceneNormal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneNormal.swift; sourceTree = "<group>"; };
 		EB1F004024327216000A3751 /* TouristSpot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouristSpot.swift; sourceTree = "<group>"; };
 		EB31CBB3243C10580060E649 /* LocalDescriptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDescriptions.swift; sourceTree = "<group>"; };
+		EB31CBB8243C2FE00060E649 /* PassportPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassportPopUp.swift; sourceTree = "<group>"; };
+		EB31CBBA243C3B440060E649 /* Passport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passport.swift; sourceTree = "<group>"; };
+		EB31CBBC243C6B480060E649 /* initialGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = initialGameScene.swift; sourceTree = "<group>"; };
+		EB31CBBE243C80CF0060E649 /* EndGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGameScene.swift; sourceTree = "<group>"; };
 		EB3E66CE243A7F7B00874DA4 /* TouristPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouristPopUp.swift; sourceTree = "<group>"; };
 		EBD6BE5D242E7E1E0020A612 /* projetoWWDC20.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projetoWWDC20.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBD6BE60242E7E1E0020A612 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,11 +97,10 @@
 		EB24503824326066005DD956 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EB31CBB7243C2DBB0060E649 /* PassportFiles */,
+				EB31CBB6243C2D750060E649 /* TouristFiles */,
 				EB1F004424329229000A3751 /* StateMachine */,
 				EBD6BE7B242E82AB0020A612 /* Character.swift */,
-				EB1F004024327216000A3751 /* TouristSpot.swift */,
-				EB3E66CE243A7F7B00874DA4 /* TouristPopUp.swift */,
-				EB31CBB3243C10580060E649 /* LocalDescriptions.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -105,6 +112,25 @@
 				EBD6BE68242E7E1E0020A612 /* ViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		EB31CBB6243C2D750060E649 /* TouristFiles */ = {
+			isa = PBXGroup;
+			children = (
+				EB31CBB3243C10580060E649 /* LocalDescriptions.swift */,
+				EB1F004024327216000A3751 /* TouristSpot.swift */,
+				EB3E66CE243A7F7B00874DA4 /* TouristPopUp.swift */,
+			);
+			path = TouristFiles;
+			sourceTree = "<group>";
+		};
+		EB31CBB7243C2DBB0060E649 /* PassportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				EB31CBB8243C2FE00060E649 /* PassportPopUp.swift */,
+				EB31CBBA243C3B440060E649 /* Passport.swift */,
+			);
+			path = PassportFiles;
 			sourceTree = "<group>";
 		};
 		EB3E66D0243A806600874DA4 /* Scene */ = {
@@ -130,6 +156,8 @@
 			children = (
 				EBD6BE6C242E7E1F0020A612 /* Main.storyboard */,
 				EBD6BE66242E7E1E0020A612 /* GameScene.swift */,
+				EB31CBBC243C6B480060E649 /* initialGameScene.swift */,
+				EB31CBBE243C80CF0060E649 /* EndGameScene.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -237,15 +265,19 @@
 				EBD6BE69242E7E1E0020A612 /* ViewController.swift in Sources */,
 				EB31CBB4243C10580060E649 /* LocalDescriptions.swift in Sources */,
 				EB1F004124327216000A3751 /* TouristSpot.swift in Sources */,
+				EB31CBB9243C2FE00060E649 /* PassportPopUp.swift in Sources */,
+				EB31CBBB243C3B440060E649 /* Passport.swift in Sources */,
 				EB3E66CF243A7F7B00874DA4 /* TouristPopUp.swift in Sources */,
 				EB173B202436615A00867DB4 /* SceneNormal.swift in Sources */,
 				EB173B1A24365E3400867DB4 /* SceneTouristSpot.swift in Sources */,
+				EB31CBBD243C6B480060E649 /* initialGameScene.swift in Sources */,
 				EBD6BE67242E7E1E0020A612 /* GameScene.swift in Sources */,
 				EBD6BE61242E7E1E0020A612 /* AppDelegate.swift in Sources */,
 				EB146ABA2433864B00180D58 /* NotVisited.swift in Sources */,
 				EB173B1C24365E4300867DB4 /* ScenePassport.swift in Sources */,
 				EBD6BE7C242E82AB0020A612 /* Character.swift in Sources */,
 				EB146AB82433863900180D58 /* Visited.swift in Sources */,
+				EB31CBBF243C80CF0060E649 /* EndGameScene.swift in Sources */,
 				EB146ABC2433881200180D58 /* PointState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
